@@ -1,0 +1,6 @@
+C:/Users/Wiver/Desktop/taller1/build/CMakeFiles/tutorial.dir
+C:/Users/Wiver/Desktop/taller1/build/CMakeFiles/edit_cache.dir
+C:/Users/Wiver/Desktop/taller1/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Wiver/Desktop/taller1/build/glad/CMakeFiles/glad.dir
+C:/Users/Wiver/Desktop/taller1/build/glad/CMakeFiles/edit_cache.dir
+C:/Users/Wiver/Desktop/taller1/build/glad/CMakeFiles/rebuild_cache.dir
