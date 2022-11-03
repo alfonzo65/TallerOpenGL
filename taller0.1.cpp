@@ -254,6 +254,7 @@ int main()
 	    		nuestroShader.setMat4("model", modelCuadrado);
 	    		glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
 
+			/*
 	    		// figura de lado derecho iniciar traslacion
 
 	    		// trasladando de derecha a izquierda 
@@ -277,13 +278,20 @@ int main()
 				modelTriangulo = glm::rotate( modelTriangulo, float(glm::radians(90.0f*tiempo)), glm::vec3(0.0,0.0,1.0));
 				nuestroShader.setMat4("model", modelTriangulo);
 
+			*/
+			
+			// mejor implementacion
+			modelTriangulo = glm::rotate( modelTriangulo, float(glm::radians(90.0f*tiempo)), glm::vec3(0.0,0.0,1.0));
+	    		modelTriangulo = glm::translate( modelTriangulo, glm::vec3(3.0, 0.0, 0.0) );
+			modelTriangulo = glm::rotate( modelTriangulo, float(glm::radians(90.0f*tiempo)), glm::vec3(0.0,0.0,1.0));
+			nuestroShader.setMat4("model", modelTriangulo);    
+			    
 	    		glBindVertexArray(VAOs[0]);
 	    		glDrawArrays(GL_TRIANGLES,0,3);
 
 	    		//************************** fin de la traslacion de la figura derecha *******************
-
+			/*
 	    		// figura de lado izquierdo iniciar traslacion
-
 	    		if( sentidoPentagono < 1 ){
 					modelPentagono = glm::translate(modelPentagono, glm::vec3(posicionInicialIzquierdaPentagono_X, posicionInicialIzquierdaPentagono_Y, 0.0));
 					posicionInicialIzquierdaPentagono_X -= velocidad;
@@ -299,7 +307,9 @@ int main()
 
 				determinarSentidoHorizontal( posicionInicialIzquierdaPentagono_X, rangoDeMovimientoEjeX, &sentidoPentagono);
 				determinarSentidoVertical( posicionInicialIzquierdaPentagono_Y, rangoDeMovimientoEjeY, &subir_or_bajar_pentagono);
-
+			*/
+				modelPentagono = glm::rotate( modelPentagono, float(glm::radians(90.0f*tiempo)), glm::vec3(0.0,0.0,1.0));
+				modelPentagono = glm::translate( modelPentagono, glm::vec3(-3.0, 0.0, 0.0) );
 				modelPentagono = glm::rotate( modelPentagono, float(glm::radians(90.0f*tiempo)), glm::vec3(0.0,0.0,1.0));
 				nuestroShader.setMat4("model", modelPentagono);
 
